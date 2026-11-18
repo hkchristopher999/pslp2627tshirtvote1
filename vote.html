@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#fff2bc">
+<meta name="description" content="2026–2027 聯校親子運動會家長服裝設計，班代表投票統計系統。">
+<title>班代表投票系統 | 2026–2027 聯校親子運動會</title>
+<style>
+:root{--ink:#182b45;--muted:#617389;--teal:#158a8e;--blue:#1d628b;--yellow:#ffd347;--pale:#fff8e2;--paper:#f5f7fa;--line:#e5e9ef;--shadow:0 15px 38px rgba(20,45,72,.08);--green:#15825c;--warn:#a16413}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Noto Sans TC","PingFang TC","Microsoft JhengHei",Arial,sans-serif;line-height:1.55}button,input,select{font:inherit}button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid #167cdd;outline-offset:3px}button{cursor:pointer}button:disabled{opacity:.6;cursor:wait}a{color:var(--blue)}
+.hero{background:linear-gradient(123deg,#fff9df 0%,#fff2bc 56%,#edf8f5 100%);border-bottom:1px solid #f0e5af}.hero-inner{max-width:1100px;margin:auto;padding:29px 26px 36px}.back{display:inline-flex;align-items:center;gap:7px;color:#1a7582;text-decoration:none;font-size:13px;font-weight:850;margin-bottom:23px}.back:hover{text-decoration:underline}.schools{font-size:12px;color:#486577;font-weight:750;margin-bottom:14px}.schools span{display:block}.eyebrow{color:#138489;font-size:12px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;margin:0 0 7px}.hero h1{margin:0;font-size:clamp(30px,4vw,43px);letter-spacing:-.035em;line-height:1.2}.hero p:last-child{margin:9px 0 0;color:#46657b;font-size:15px;font-weight:650}
+.wrap{max-width:1100px;margin:0 auto;padding:30px 24px 70px}.panel{background:white;border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}.login{max-width:520px;margin:15px auto 0;padding:29px}.login h2{font-size:24px;margin:0 0 5px}.sub{color:var(--muted);font-size:13px;margin:0 0 26px}.field{display:flex;flex-direction:column;gap:8px;margin-bottom:21px}.field label{font-weight:800;font-size:14px}.field input,.field select{border:1.5px solid #d6e0e7;background:white;border-radius:11px;width:100%;padding:13px 14px;min-height:48px;color:var(--ink)}.field input:focus,.field select:focus{border-color:var(--teal)}.btn{border:0;border-radius:12px;padding:12px 19px;font-weight:850;min-height:46px}.primary{color:white;background:#157d87}.primary:hover{background:#0e6b75}.secondary{background:#eaf2f5;color:#2a627c}.secondary:hover{background:#d9e9ef}.ghost{background:white;border:1px solid #d5e2e9;color:#245d73}.btn-wide{width:100%}.notice{background:#edf7f8;border:1px solid #d1e8eb;border-radius:12px;padding:12px 14px;color:#386477;font-size:13px;margin-top:21px}.message{font-size:13px;margin:15px 0 0;font-weight:700;min-height:21px}.message:empty{display:none}.message.error{color:#b7342e}.message.success{color:var(--green)}
+.workspace{display:none}.workspace.active{display:block}.login[hidden],.workspace[hidden]{display:none!important}.topline{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:22px;flex-wrap:wrap}.welcome{display:flex;align-items:center;gap:12px}.avatar{height:50px;min-width:60px;padding:0 10px;border-radius:13px;background:#d9f1ee;color:#116e77;display:grid;place-items:center;font-weight:950;font-size:15px}.welcome strong{display:block;font-size:18px}.welcome small{display:block;color:var(--muted);font-size:12px}.tabs{display:flex;gap:7px;background:#edf0f4;padding:6px;border-radius:13px;margin:0 0 21px;flex-wrap:wrap}.tab{border:0;background:transparent;color:#51677a;font-size:14px;font-weight:850;padding:12px 19px;border-radius:10px;flex:1}.tab.active{background:white;color:#107980;box-shadow:0 3px 14px #15314c0b}.area[hidden]{display:none!important}.section-head{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap;margin-bottom:19px}.section-head h2{margin:0 0 5px;font-size:24px;letter-spacing:-.03em}.section-head p{margin:0;color:var(--muted);font-size:13px}.edit-state{display:inline-block;border-radius:50px;background:#eff5f7;color:#507181;padding:6px 12px;font-size:12px;font-weight:800}.edit-state.unsaved{background:#fff1d8;color:#986016}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.vote-item{background:white;border:1px solid var(--line);border-radius:15px;display:flex;align-items:center;gap:13px;padding:12px}.thumb{width:73px;height:76px;object-fit:contain;background:#f4f7f7;border-radius:9px;flex:0 0 73px}.thumb-fallback{width:73px;height:76px;flex:0 0 73px;border-radius:9px;background:#eaf6f4;color:#2e9192;display:grid;place-items:center;font-size:25px;font-weight:900}.vote-info{min-width:0;flex:1}.vote-info label{font-weight:900;font-size:15px;display:block;margin-bottom:6px}.vote-info small{display:block;font-size:11px;color:var(--muted);margin-top:4px}.vote-info input{width:100%;min-width:0;border-radius:9px;border:1.5px solid #d7e2e7;padding:9px 11px;height:43px;font-weight:750;font-size:17px;color:var(--ink)}.vote-info input:focus{border-color:var(--teal)}.vote-info input:invalid{border-color:#ca4136}.savebar{display:flex;align-items:center;justify-content:space-between;gap:14px;background:#fff;border:1px solid #e3e8ec;border-radius:16px;padding:19px 20px;margin-top:19px;position:sticky;bottom:12px;box-shadow:0 8px 24px #17384b20;z-index:2}.savebar strong{font-size:19px;display:block}.savebar span{font-size:12px;color:var(--muted)}.savebar-actions{display:flex;gap:8px;align-items:center}.form-note{font-size:13px;color:#65768a;margin:12px 3px}
+.summary-tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin-bottom:20px}.stat{padding:20px;border:1px solid var(--line);border-radius:17px;background:#fff}.stat small{display:block;color:var(--muted);font-size:12px;font-weight:750}.stat strong{font-size:29px;line-height:1.5;display:block;color:#167984}.stat span{font-size:12px;color:#758494}.results-panel{padding:22px}.result-row{display:grid;grid-template-columns:42px 114px minmax(0,1fr) 95px;gap:13px;align-items:center;padding:13px 0;border-bottom:1px solid #edf0f3}.result-row:last-child{border-bottom:0}.rank{font-size:13px;color:#6a7f92;font-weight:900}.rank.top{color:#ba7807}.result-name{font-weight:850;font-size:14px}.bar-track{width:100%;height:12px;background:#eef2f5;border-radius:99px;overflow:hidden}.bar-fill{height:100%;width:0;background:linear-gradient(90deg,#36afa8,#16858d);border-radius:99px;transition:width .25s}.bar-fill.lead{background:linear-gradient(90deg,#ffcf42,#e8a926)}.result-votes{font-weight:900;text-align:right;white-space:nowrap}.result-votes span{display:block;font-size:11px;color:#77879a;font-weight:650}.details{margin-top:20px;background:#fff;padding:20px 23px}.details h3{font-size:17px;margin:0 0 13px}.class-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.class-chip{background:#f6f8f9;border-radius:10px;padding:9px 12px;display:flex;justify-content:space-between;align-items:center;gap:7px;font-size:13px}.class-chip b{font-size:13px}.class-chip span{font-size:11px;color:#75869a}.class-chip.done span{color:var(--green);font-weight:850}.refresh-top{display:flex;gap:9px;align-items:center}.stamp{font-size:12px;color:#78899a}.footer{text-align:center;font-size:12px;color:#6c7b8d;padding:20px}.loading{color:var(--muted);font-size:13px}
+@media(max-width:750px){.form-grid{grid-template-columns:1fr}.summary-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.stat:last-child{grid-column:1/-1}.class-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:540px){.hero-inner{padding:22px 18px 29px}.wrap{padding:20px 13px 50px}.login{padding:23px 20px}.topline{align-items:center}.result-row{grid-template-columns:26px 84px minmax(0,1fr) 68px;gap:8px}.result-name{font-size:12px}.result-votes{font-size:14px}.results-panel{padding:14px}.class-list{grid-template-columns:1fr}.savebar{padding:13px;flex-wrap:wrap;bottom:6px}.savebar-actions{width:100%;justify-content:flex-end}.summary-tiles{gap:8px}.stat{padding:13px}.stat strong{font-size:24px}.tabs{gap:3px}.tab{padding:11px 8px;font-size:13px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="hero-inner">
+<a class="back" href="/index.html">← 返回 16 款設計作品</a>
+<div class="schools"><span>學之園海翩康城校 · Learning Habitat Kindergarten &amp; Bilingual Nursery</span><span>PSLP Papillons LP Campus</span></div>
+<p class="eyebrow">2026–2027 · Joint School Parent-child Sports Day</p>
+<h1>班代表投票系統</h1>
+<p>家長服裝設計 · 班別票數登記及總結果</p>
+</div></header>
+<main class="wrap">
+<section class="panel login" id="login-area" aria-labelledby="login-heading">
+<h2 id="login-heading">班代表登入</h2><p class="sub">請選擇所屬班別並輸入密碼。登入後只能更新自己班別的投票數字。</p>
+<form id="login-form">
+<div class="field"><label for="class-select">登入編號／班別</label><select id="class-select" required><option value="">請選擇班別</option></select></div>
+<div class="field"><label for="password">登入密碼</label><input type="password" id="password" required autocomplete="current-password" placeholder="輸入班別密碼"></div>
+<button id="login-button" class="btn primary btn-wide" type="submit">登入投票系統</button>
+<p class="message" id="login-message" role="alert"></p>
+</form>
+<div class="notice">每班設有獨立紀錄。再次登入可查看原有票數並修改，儲存後會自動重新計算全部班別的總票數。</div>
+</section>
+<section class="workspace" id="workspace" aria-label="班代表工作區" hidden>
+<div class="topline"><div class="welcome"><div class="avatar" id="class-avatar">K2C</div><div><strong id="class-title">班代表</strong><small id="class-status">投票紀錄</small></div></div><button id="logout-button" class="btn ghost" type="button">登出</button></div>
+<div class="tabs" role="tablist" aria-label="功能切換"><button type="button" class="tab active" id="edit-tab" role="tab" aria-controls="edit-area" aria-selected="true">填寫／修改票數</button><button type="button" class="tab" id="result-tab" role="tab" aria-controls="result-area" aria-selected="false">查看總投票結果</button></div>
+<section class="area" id="edit-area" role="tabpanel" aria-labelledby="edit-tab">
+<div class="section-head"><div><h2>各作品投票人數</h2><p>請為 16 件作品填入票數。無票的作品請輸入 0。</p></div><span id="edit-state" class="edit-state">未有修改</span></div>
+<form id="vote-form"><div class="form-grid" id="vote-grid"></div><p class="form-note">所有數字均為所屬班別的票數。未填寫欄位會當作 0，按「儲存票數」後會覆蓋該班上一次提交的數字，而非累加。</p>
+<div class="savebar"><div><strong id="my-votes-total">合共 0 票</strong><span>本班 16 件作品票數總和</span></div><div class="savebar-actions"><button class="btn secondary" type="button" id="reset-button">還原未儲存修改</button><button class="btn primary" type="submit" id="save-button">儲存票數</button></div></div><p class="message" id="save-message" role="status"></p></form>
+</section>
+<section class="area" id="result-area" role="tabpanel" aria-labelledby="result-tab" hidden>
+<div class="section-head"><div><h2>全部班別總投票結果</h2><p>各班最新儲存的 16 件作品票數，按總票數由高至低排列。</p></div><div class="refresh-top"><span class="stamp" id="refresh-stamp"></span><button class="btn secondary" id="refresh-button" type="button">重新整理</button></div></div>
+<div class="summary-tiles"><div class="stat"><small>已填報班別</small><strong id="submitted-count">0 / 18</strong><span>已儲存投票紀錄的班別</span></div><div class="stat"><small>累計總票數</small><strong id="all-votes-total">0</strong><span>全部作品票數總和</span></div><div class="stat"><small>最高票作品</small><strong id="leading-work">暫無</strong><span id="leading-votes">尚未有已提交的票數</span></div></div>
+<div class="panel results-panel" id="result-list" aria-live="polite"><p class="loading">正在讀取結果…</p></div>
+<div class="panel details"><h3>各班填報狀態</h3><div class="class-list" id="class-list"></div></div>
+<p class="message" id="results-message" role="status"></p>
+</section>
+</section>
+</main><footer class="footer">2026–2027 · Joint School Parent-child Sports Day</footer>
+<script>
+'use strict';
+const CLASS_IDS=['PNA','PNB','PNC','PND','K1A','K1B','K1C','K1D','K2A','K2B','K2C','K2D','K2E','K2F','K3A','K3B','K3C','K3D'];
+const WORK_COUNT=16;
+const $=id=>document.getElementById(id);
+const state={classId:null,saved:null,dirty:false,activeTab:'edit'};
+const fmt=n=>Number(n).toLocaleString('zh-HK');
+const two=n=>String(n).padStart(2,'0');
+const safeDate=value=>value?new Date(value).toLocaleString('zh-HK',{year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}):'未曾填報';
+async function api(path,options={}){
+  let response;
+  try {response=await fetch(path,{credentials:'same-origin',cache:'no-store',headers:{'Content-Type':'application/json'},...options});}
+  catch {throw new Error('未能連接投票伺服器，請檢查網絡連線。')}
+  let payload;try{payload=await response.json()}catch{throw new Error('伺服器回應無效，請稍後再試。')}
+  if(!response.ok)throw new Error(payload.error||'操作失敗，請稍後再試。');
+  return payload;
+}
+function message(el,text,type=''){el.textContent=text;el.className='message'+(type?' '+type:'')}
+function setBusy(id,on){$(id).disabled=on}
+function makeFields(){
+  const grid=$('vote-grid');
+  for(let n=1;n<=WORK_COUNT;n++){
+    const item=document.createElement('div');item.className='vote-item';
+    const img=document.createElement('img');img.className='thumb';img.loading='lazy';img.alt=`作品 ${two(n)} 設計縮圖`;img.src=`/images/work-${two(n)}-01.webp`;
+    img.onerror=()=>{const fallback=document.createElement('div');fallback.className='thumb-fallback';fallback.textContent=two(n);fallback.setAttribute('aria-hidden','true');img.replaceWith(fallback)};
+    const content=document.createElement('div');content.className='vote-info';
+    const label=document.createElement('label');label.textContent=`作品 ${two(n)}`;label.htmlFor=`work-${n}`;
+    const input=document.createElement('input');input.id=`work-${n}`;input.type='number';input.min='0';input.max='99999';input.step='1';input.inputMode='numeric';input.placeholder='0';input.setAttribute('aria-label',`作品 ${two(n)} 票數`);
+    input.addEventListener('input',updateEditing);
+    const help=document.createElement('small');help.textContent='票數／人';
+    content.append(label,input,help);item.append(img,content);grid.append(item);
+  }
+}
+function readCounts(){return Array.from({length:WORK_COUNT},(_,i)=>{const value=$(`work-${i+1}`).value.trim();return value===''?0:Number(value)})}
+function fillCounts(counts){for(let i=0;i<WORK_COUNT;i++)$(`work-${i+1}`).value=counts===null?'':String(counts[i]);updateEditing()}
+function validate(){
+  for(let i=1;i<=WORK_COUNT;i++){
+    const input=$(`work-${i}`),value=input.value.trim();
+    if(value && (!/^(0|[1-9]\d*)$/.test(value)||!Number.isSafeInteger(Number(value))||Number(value)>99999)){
+      input.focus();throw new Error(`作品 ${two(i)} 必須填寫 0 至 99,999 的整數票數。`)
+    }
+  }
+}
+function updateEditing(){
+  const counts=readCounts();const total=counts.reduce((sum,n)=>sum+(Number.isFinite(n)?n:0),0);
+  $('my-votes-total').textContent=`合共 ${fmt(total)} 票`;
+  const saved=state.saved===null?Array(WORK_COUNT).fill(0):state.saved;
+  state.dirty=counts.some((v,i)=>v!==saved[i]);
+  const element=$('edit-state');element.textContent=state.dirty?'尚有未儲存的修改':'已與儲存紀錄同步';element.classList.toggle('unsaved',state.dirty);
+}
+function showLoggedIn(data){
+  state.classId=data.classId;state.saved=data.votes;
+  $('login-area').hidden=true;$('workspace').hidden=false;$('workspace').classList.add('active');
+  $('class-avatar').textContent=data.classId;$('class-title').textContent=`${data.classId} 班代表`;
+  $('class-status').textContent=data.updatedAt?`上次儲存：${safeDate(data.updatedAt)}`:'尚未提交任何票數';
+  fillCounts(data.votes);switchTab('edit');
+}
+function showLoggedOut(){
+  state.classId=null;state.saved=null;state.dirty=false;
+  $('login-area').hidden=false;$('workspace').hidden=true;$('workspace').classList.remove('active');
+  $('password').value='';message($('login-message'),'');
+}
+async function login(event){
+  event.preventDefault();message($('login-message'),'');setBusy('login-button',true);
+  try{
+    const data=await api('/api/login',{method:'POST',body:JSON.stringify({classId:$('class-select').value,password:$('password').value})});
+    $('password').value='';showLoggedIn(data);
+  }catch(e){message($('login-message'),e.message,'error')}
+  finally{setBusy('login-button',false)}
+}
+async function logout(){
+  if(state.dirty&&!confirm('尚有未儲存的修改，確定登出嗎？'))return;
+  try{await api('/api/logout',{method:'POST',body:'{}'})}catch(e){message($('save-message'),e.message,'error');return}
+  showLoggedOut();
+}
+async function save(event){
+  event.preventDefault();message($('save-message'),'');
+  try{validate()}catch(e){message($('save-message'),e.message,'error');return}
+  setBusy('save-button',true);
+  try{
+    const counts=readCounts();const data=await api('/api/votes',{method:'PUT',body:JSON.stringify({votes:counts})});
+    state.saved=data.votes;$('class-status').textContent=`上次儲存：${safeDate(data.updatedAt)}`;
+    fillCounts(data.votes);message($('save-message'),'票數已成功儲存，總投票結果已更新。','success');
+    await switchTab('results');
+  }catch(e){message($('save-message'),e.message,'error')}
+  finally{setBusy('save-button',false)}
+}
+function getLeadingText(totals){
+  const max=Math.max(...totals);
+  if(max===0)return {name:'暫無',info:'尚未有已提交的票數'};
+  const winners=totals.map((v,i)=>({v,i})).filter(x=>x.v===max);
+  return {name:winners.length===1?`作品 ${two(winners[0].i+1)}`:`${winners.length} 件並列`,info:`最高 ${fmt(max)} 票`};
+}
+function drawResults(data){
+  const totals=data.totals;const total=data.grandTotal;
+  $('submitted-count').textContent=`${data.submittedClasses} / ${CLASS_IDS.length}`;
+  $('all-votes-total').textContent=fmt(total);
+  const leader=getLeadingText(totals);$('leading-work').textContent=leader.name;$('leading-votes').textContent=leader.info;
+  const max=Math.max(1,...totals),maxVote=Math.max(...totals);
+  const ranking=totals.map((votes,i)=>({votes,number:i+1})).sort((a,b)=>b.votes-a.votes||a.number-b.number);
+  const list=$('result-list');list.replaceChildren();
+  for(const [idx,row] of ranking.entries()){
+    const line=document.createElement('div');line.className='result-row';
+    const rank=document.createElement('span');rank.className='rank'+(idx===0&&row.votes>0?' top':'');rank.textContent=`${idx+1}`;
+    const name=document.createElement('span');name.className='result-name';name.textContent=`作品 ${two(row.number)}`;
+    const track=document.createElement('div');track.className='bar-track';track.setAttribute('role','meter');track.setAttribute('aria-label',`作品 ${two(row.number)} 票數`);track.setAttribute('aria-valuemin','0');track.setAttribute('aria-valuemax',String(max));track.setAttribute('aria-valuenow',String(row.votes));
+    const bar=document.createElement('div');bar.className='bar-fill'+(row.votes>0&&row.votes===maxVote?' lead':'');bar.style.width=`${(row.votes/max)*100}%`;track.append(bar);
+    const votes=document.createElement('span');votes.className='result-votes';votes.textContent=`${fmt(row.votes)} 票`;
+    const pct=document.createElement('span');pct.textContent=total?`${(row.votes/total*100).toFixed(1)}%`:'0.0%';votes.append(pct);
+    line.append(rank,name,track,votes);list.append(line);
+  }
+  const classes=$('class-list');classes.replaceChildren();
+  for(const classId of CLASS_IDS){
+    const submitted=!!data.classes[classId]?.submitted;
+    const item=document.createElement('div');item.className='class-chip'+(submitted?' done':'');
+    const label=document.createElement('b');label.textContent=classId;
+    const status=document.createElement('span');status.textContent=submitted?'已填報':'尚未填報';
+    item.title=submitted?`更新：${safeDate(data.classes[classId].updatedAt)}`:'尚未填報';
+    item.append(label,status);classes.append(item);
+  }
+  $('refresh-stamp').textContent=`更新於 ${new Date().toLocaleTimeString('zh-HK',{hour:'2-digit',minute:'2-digit'})}`;
+}
+async function refreshResults(){
+  setBusy('refresh-button',true);message($('results-message'),'');
+  try{const data=await api('/api/summary');drawResults(data)}
+  catch(e){message($('results-message'),e.message,'error');if(e.message.includes('重新登入'))showLoggedOut()}
+  finally{setBusy('refresh-button',false)}
+}
+async function switchTab(next){
+  state.activeTab=next;
+  const results=next==='results';
+  $('edit-area').hidden=results;$('result-area').hidden=!results;
+  $('edit-tab').classList.toggle('active',!results);$('result-tab').classList.toggle('active',results);
+  $('edit-tab').setAttribute('aria-selected',String(!results));$('result-tab').setAttribute('aria-selected',String(results));
+  if(results)await refreshResults();
+}
+async function boot(){
+  for(const c of CLASS_IDS){const option=document.createElement('option');option.value=c;option.textContent=c;$('class-select').append(option)}
+  makeFields();$('login-form').addEventListener('submit',login);$('vote-form').addEventListener('submit',save);
+  $('logout-button').addEventListener('click',logout);
+  $('edit-tab').addEventListener('click',()=>switchTab('edit'));
+  $('result-tab').addEventListener('click',()=>switchTab('results'));
+  $('refresh-button').addEventListener('click',refreshResults);
+  $('reset-button').addEventListener('click',()=>{if(state.dirty&&!confirm('確定要還原至上次儲存的票數嗎？'))return;fillCounts(state.saved);message($('save-message'),'已還原未儲存的修改。')});
+  window.addEventListener('beforeunload',e=>{if(state.dirty){e.preventDefault();e.returnValue=''}});
+  try{const me=await api('/api/me');if(me.authenticated)showLoggedIn(me)}
+  catch(e){message($('login-message'),e.message,'error')}
+}
+boot();
+</script>
+</body>
+</html>
